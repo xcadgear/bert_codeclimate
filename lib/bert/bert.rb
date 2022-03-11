@@ -13,6 +13,12 @@ module BERT
     "<<" + bytes.join(',') + ">>"
   end
 
+  def self.ebin2(str)
+    bytes = []
+    str.each_byte { |b| bytes << b.to_s }
+    "<<" + bytes.join(',') + ">>"
+  end
+
   class Tuple < Array
     def inspect
       "t#{super}"
