@@ -63,13 +63,6 @@ class BertTest < Test::Unit::TestCase
       assert_equal now.to_i, decoded.to_i
     end
 
-    should "do roundtrips for date time" do
-      now = Time.now
-      decoded = BERT.decode(BERT.encode(now))
-      assert(decoded.is_a?(Time))
-      assert_equal now.to_i, decoded.to_i
-    end
-
     # should "let me inspect it" do
     #   puts
     #   p @ruby
