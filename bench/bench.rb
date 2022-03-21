@@ -33,4 +33,5 @@ Benchmark.bm do |bench|
   bench.report("Ruby small") {ITER.times {Marshal.load(Marshal.dump(small))}}
   bench.report("Ruby large") {ITER.times {Marshal.load(Marshal.dump(large))}}
   bench.report("Ruby complex") {ITER.times {Marshal.load(Marshal.dump(complex))}}
+  bench.report("Ruby complex 2") {ITER.times {Marshal.load(Marshal.dump(complex))}}
 end
